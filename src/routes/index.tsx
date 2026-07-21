@@ -24,6 +24,7 @@ import {
   Target,
   Wrench,
 } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -54,6 +55,7 @@ const GITHUB_URL = "https://github.com/Sunil18v";
 const LINKEDIN_URL = "https://www.linkedin.com/in/sunil-kumar-b77365319/";
 const EMAIL = "sunilkumarkambar205@gmail.com";
 const PHONE = "+91 9353896944";
+const WHATSAPP_URL = "https://wa.me/919353896944";
 const BUILDER_URL = "https://vinodbavage.dev";
 
 const ROLES = ["Data Analyst", "ML Engineer", "Data Scientist"];
@@ -351,9 +353,9 @@ function Hero({ onResume }: { onResume: () => void }) {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            I turn messy datasets into decisions. Entry-level Data Analyst with hands-on
-            experience across Python, SQL, Power BI and end-to-end machine learning
-            pipelines — passionate about shipping data products that move the needle.
+            An early-career Data Analyst based in Bengaluru. I work with Python, SQL and
+            Power BI to clean up messy data, build dashboards, and put together simple
+            machine learning models that help teams make better decisions.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-glow)]">
@@ -472,39 +474,39 @@ function QuickActions({ onResume }: { onResume: () => void }) {
 
 function About() {
   return (
-    <Section id="about" eyebrow="About" title="Data-driven, delivery-focused.">
+    <Section id="about" eyebrow="About" title="About me.">
       <div className="grid gap-10 md:grid-cols-[1.3fr_1fr]">
         <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
           <p>
-            I'm an entry-level Data Analyst who loves turning raw data into stories that
-            drive decisions. My toolkit spans Python (Pandas, NumPy, Scikit-learn), SQL,
-            and Power BI, and I'm equally comfortable building an ML pipeline as I am
-            wiring up a dashboard for a stakeholder review.
+            I'm a Data Analyst starting out in my career, based in Bengaluru. Most of my
+            day-to-day work is with Python (Pandas, NumPy, Scikit-learn), SQL and Power
+            BI — cleaning data, writing queries, building dashboards and putting together
+            small machine learning experiments.
           </p>
           <p>
-            I've shipped analytics and ML work across internships at ExcelR and Roman
-            Technologies — automating reports, tuning models, and translating fuzzy
-            business questions into crisp, measurable answers.
+            During my internships at ExcelR and Roman Technologies I got to work on real
+            reporting problems, automate a few recurring reports, and try my hand at
+            end-to-end ML pipelines. I still consider myself a learner and enjoy picking
+            up new tools when a project needs them.
           </p>
         </div>
         <div className="space-y-4">
           <Card className="border-border bg-card p-5">
             <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-widest text-primary">
-              <Target className="h-4 w-4" /> Career Focus
+              <Target className="h-4 w-4" /> What I do
             </div>
             <p className="text-sm text-muted-foreground">
-              Building high-signal dashboards and production-ready ML systems that convert
-              data into measurable business outcomes.
+              Build clear dashboards and reports, and write Python/SQL to explore data
+              and support small ML projects.
             </p>
           </Card>
           <Card className="border-border bg-card p-5">
             <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-widest text-primary">
-              <Sparkles className="h-4 w-4" /> What I'm Looking For
+              <Sparkles className="h-4 w-4" /> What I'm looking for
             </div>
             <p className="text-sm text-muted-foreground">
-              A full-time Data Analyst, ML Engineer or Data Scientist role on a team that
-              values curiosity, ownership and shipping — where I can grow alongside senior
-              practitioners on real, high-impact problems.
+              A full-time Data Analyst, ML Engineer or Data Scientist role where I can
+              contribute, learn from senior teammates, and grow over time.
             </p>
           </Card>
         </div>
@@ -515,29 +517,54 @@ function About() {
 
 function Education() {
   return (
-    <Section id="education" eyebrow="Education" title="Where I trained.">
-      <Card className="flex flex-col gap-4 border-border bg-card p-6 md:flex-row md:items-center md:justify-between md:p-8">
-        <div className="flex items-start gap-4">
-          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary">
-            <GraduationCap className="h-6 w-6" />
-          </span>
-          <div className="min-w-0">
-            <p className="font-display text-lg font-semibold">
-              B.E. in Artificial Intelligence & Machine Learning
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Bheemanna Khandre Institute of Technology, Bhalki, Karnataka
-            </p>
+    <Section id="education" eyebrow="Education" title="Education.">
+      <Card className="border-border bg-card p-6 md:p-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <div className="flex items-start gap-4">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary">
+              <GraduationCap className="h-6 w-6" />
+            </span>
+            <div className="min-w-0">
+              <p className="font-display text-lg font-semibold">
+                B.E. in Artificial Intelligence & Machine Learning
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Bheemanna Khandre Institute of Technology, Bhalki, Karnataka
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+            <Badge variant="secondary" className="rounded-full">
+              2021 – 2025
+            </Badge>
+            <Badge className="rounded-full bg-primary/15 text-primary hover:bg-primary/20">
+              Graduated 2025
+            </Badge>
           </div>
         </div>
-        <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-          <Badge variant="secondary" className="rounded-full">
-            2021 – 2025
-          </Badge>
-          <Badge className="rounded-full bg-primary/15 text-primary hover:bg-primary/20">
-            Graduated 2025
-          </Badge>
-        </div>
+        <ul className="mt-5 space-y-2 border-t border-border/60 pt-5 text-sm text-muted-foreground">
+          <li className="flex gap-2">
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span>
+              Coursework covered Python, DBMS, statistics, machine learning and deep
+              learning fundamentals.
+            </span>
+          </li>
+          <li className="flex gap-2">
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span>
+              Final-year project focused on applying machine learning to a real-world
+              dataset — from data cleaning to model evaluation.
+            </span>
+          </li>
+          <li className="flex gap-2">
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span>
+              Took part in college coding activities and technical events, and worked on
+              small team projects alongside classmates.
+            </span>
+          </li>
+        </ul>
       </Card>
     </Section>
   );
@@ -545,7 +572,7 @@ function Education() {
 
 function Skills() {
   return (
-    <Section id="skills" eyebrow="Skills" title="Tools I reach for.">
+    <Section id="skills" eyebrow="Skills" title="Skills & tools.">
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {SKILL_GROUPS.map((g) => (
           <Card
@@ -582,7 +609,7 @@ function Skills() {
 
 function Projects() {
   return (
-    <Section id="projects" eyebrow="Projects" title="Selected work.">
+    <Section id="projects" eyebrow="Projects" title="Projects.">
       <div className="grid gap-8">
         {FEATURED_PROJECTS.map((p, i) => (
           <Card
@@ -648,7 +675,7 @@ function Projects() {
 
 function Experience() {
   return (
-    <Section id="experience" eyebrow="Experience" title="Where I've worked.">
+    <Section id="experience" eyebrow="Experience" title="Experience.">
       <div className="relative space-y-6 border-l border-border/70 pl-6 md:pl-10">
         {EXPERIENCE.map((e) => (
           <div key={e.company} className="relative">
@@ -687,7 +714,7 @@ function Experience() {
 
 function Certifications() {
   return (
-    <Section id="certifications" eyebrow="Certifications" title="Verified credentials.">
+    <Section id="certifications" eyebrow="Certifications" title="Certifications.">
       <div className="grid gap-5 md:grid-cols-2">
         {CERTIFICATIONS.map((c) => (
           <Card
@@ -743,12 +770,12 @@ function Contact() {
   };
 
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's build something.">
+    <Section id="contact" eyebrow="Contact" title="Get in touch.">
       <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-3">
           <p className="text-muted-foreground">
-            I'm actively looking for full-time roles and interesting freelance work. The
-            fastest way to reach me is email — I usually reply within a day.
+            I'm open to full-time roles and freelance projects. Email works best — I
+            usually get back within a day.
           </p>
           <div className="mt-4 space-y-3">
             <a
@@ -972,6 +999,26 @@ function PortfolioPage() {
       </main>
       <Footer />
       <ResumeDialog open={resumeOpen} onOpenChange={setResumeOpen} />
+      <WhatsAppFab />
     </div>
+  );
+}
+
+function WhatsAppFab() {
+  return (
+    <a
+      href={WHATSAPP_URL}
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="Chat on WhatsApp"
+      className="group fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-8px_rgba(37,211,102,0.6)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-8px_rgba(37,211,102,0.75)]"
+    >
+      <span
+        aria-hidden
+        className="absolute inset-0 -z-10 rounded-full bg-[#25D366] opacity-60 blur-md animate-pulse"
+      />
+      <MessageCircle className="h-5 w-5" />
+      <span className="hidden sm:inline">WhatsApp</span>
+    </a>
   );
 }
