@@ -39,7 +39,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
-import profileAsset from "@/assets/sunil-profile.jpg.asset.json";
+import profileAsset from "@/assets/sunil-profile.jpg";
 import projHrAsset from "@/assets/proj-hr.jpg";
 import projBlinkitAsset from "@/assets/proj-blinkit.jpg";
 
@@ -56,7 +56,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/sunil-kumar-b77365319/";
 const EMAIL = "sunilkumarkambar205@gmail.com";
 const PHONE = "+91 9353896944";
 const WHATSAPP_URL = "https://wa.me/919353896944";
-const BUILDER_URL = "https://vinodbavage.dev";
+const BUILDER_URL = "https://vinodbavage.vercel.app/";
 
 const ROLES = ["Data Analyst", "ML Engineer", "Data Scientist"];
 
@@ -390,7 +390,7 @@ function Hero({ onResume }: { onResume: () => void }) {
           />
           <div className="relative overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-[var(--shadow-soft)]">
             <img
-              src={profileAsset.url}
+              src={profileAsset}
               alt="Sunil Kumar portrait"
               width={1240}
               height={1240}
